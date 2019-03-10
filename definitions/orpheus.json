@@ -1,0 +1,59 @@
+{
+  "directories": {
+    "/home/$USER/rsc":                                        ["resources", "rsc", "dbg"],
+    "/home/$USER/projects":                                   ["projects", "prj"],
+    "/home/$USER/projects/taponit":                           ["taponit", "toi"],
+    "/home/$USER/projects/taponit/joi-lib":                   ["taponit-joi-lib", "taponit-joi", "toi-joi-lib", "toi-joi", "t-j-l", "joi-lib", "joi"],
+    "/home/$USER/projects/taponit/UMIClient":                 ["taponit-umi-client", "toi-umi-c", "toi-u-c", "umiclient", "uc"],
+    "/home/$USER/projects/taponit/UMIServer":                 ["taponit-umi-server", "toi-umi-s", "toi-u-s", "umiserver", "us"],
+    "/home/$USER/projects/taponit/mobileClient":              ["taponit-mobile-client", "toi-mobile-c", "toi-m-c", "mobileclient", "mc"],
+    "/home/$USER/projects/taponit/mobileServer":              ["taponit-mobile-server", "toi-mobile-s", "toi-m-s", "mobileserver", "ms"],
+    "/home/$USER/projects/taponit/workers/campaignScheduler": ["taponit-campaign-scheduler", "toi-campaign", "toi-cs", "campaignscheduler", "cs"],
+    "/home/$USER/projects/taponit/workers/smsReceive":        ["taponit-sms-receive", "toi-sms-receive", "toi-sr", "smsreceive", "rcv"],
+    "/home/$USER/projects/taponit/workers/smsReceipts":       ["taponit-sms-receipts", "toi-sms-receipts", "toi-sr", "smsreceipts", "rcpt"],
+    "/home/$USER/projects/taponit/workers/smsSend":           ["taponit-sms-send", "toi-sms-send", "toi-sms", "smssend", "sms"],
+    "/home/$USER/projects/taponit/workers/mmsSend":           ["taponit-mms-send", "toi-mms-send", "toi-mms", "mmssend", "mms"],
+    "/home/$USER/projects/taponit/workers":                   ["taponit-workers", "toi-workers", "workers"],
+    "/home/$USER/projects/taponit/services":                  ["taponit-services", "toi-services", "services"],
+    "/home/$USER/projects/better-musician":                   ["better-musician", "bm"],
+    "/home/$USER/projects/better-musician-api":               ["better-musician-api", "bm-api", "bma"],
+    "/home/$USER/projects/debugger-256":                      ["debugger-256", "debugger256", "dbg"],
+    "/home/$USER/projects/njhoffman.github.io":               ["github-pages", "ghpages"],
+    "/home/$USER/projects/templates":                         ["templates", "tpl"],
+    "/home/$USER/projects/templates/core-api":                ["templates-api", "core-api", "tpl-api", "tpla", "api"],
+    "/home/$USER/projects/templates/core-client":             ["templates-client", "core-client", "tpl-client", "tplc", "client"]
+  },
+  "runCommands": [{
+    "name": "BetterMusician Dev",
+    "command": "npm run dev | debugger256",
+    "aliases": ["better-musician", "bm"],
+    "directory": "/home/$USER/projects/better-musician"
+  }, {
+    "name": "BetterMusician Lint Watch",
+    "command": "npm run lint:watch",
+    "aliases": ["better-musician-lint", "bm-lint", "bm-l"],
+    "directory": "/home/$USER/projects/better-musician"
+  }, {
+    "name": "BetterMusician Lint Watch All",
+    "command": "npm run lint:watch:all",
+    "aliases": ["better-musician-lint", "bm-lint-all", "bm-la"],
+    "directory": "/home/$USER/projects/better-musician"
+  }, {
+
+    "name": "BetterMusician API Dev",
+    "command": "npm run dev | debugger256",
+    "aliases": ["better-musician-api", "bm-api"],
+    "directory": "/home/$USER/projects/better-musician-api"
+  }, {
+    "name": "BetterMusician API Lint Watch",
+    "command": "npm run lint:watch",
+    "aliases": ["better-musician-api-lint", "bm-api-lint", "bma-l"],
+    "directory": "/home/$USER/projects/better-musician-api"
+  }, {
+    "name": "BetterMusician API Lint Watch All",
+    "command": "npm run lint:watch:all",
+    "aliases": ["better-musician-api-lint-all", "bm-api-lint-all", "bma-la"],
+    "directory": "/home/$USER/projects/better-musician"
+  }],
+  "tmuxCommands": []
+}

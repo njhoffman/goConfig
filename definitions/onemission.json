@@ -1,0 +1,75 @@
+{
+  "directories": {
+    "/home/$USER/rsc": ["resources", "rsc"],
+    "~/onemission.prod.theme": [
+      "onemission",
+      "om",
+      "live",
+      "prod"
+    ],
+    "~/onemission.prod": [
+      "onemission-base",
+      "om-base",
+      "live-base",
+      "prod-base",
+      "onemission-root",
+      "om-root",
+      "live-root",
+      "prod-root"
+    ],
+    "~/onemission.dev.theme": [
+      "onemission-dev",
+      "om-dev",
+      "dev"
+    ],
+    "~/onemission.dev": [
+      "onemission-dev-base",
+      "om-dev-base",
+      "dev-base",
+      "onemission-dev-root",
+      "om-dev-root",
+      "dev-root"
+    ]
+  },
+  "runCommands": [{
+    "name": "Dev Activity Log",
+    "command": "tail -n 500 -f out.log",
+    "aliases": ["dev-log", "devlog", "dlog", "dl"],
+    "directory": "~/onemission.dev/public/content"
+  }, {
+    "name": "Dev Debug Log",
+    "command": "tail -n 500 -f debug.log",
+    "aliases": ["dev-debug-log", "dev-debug", "dev-dbg", "dd"],
+    "directory": "~/onemission.dev/public/content"
+  }, {
+    "name": "Dev Error Log",
+    "command": "tail -n 500 -f error",
+    "aliases": ["dev-error-log", "dev-error", "dev-err", "de"],
+    "directory": "/var/www/vhosts/dev.onemission.fund/log"
+  }, {
+    "name": "Live Activity Log",
+    "command": "tail -n 500 -f out.log",
+    "aliases": ["prod-log", "plog", "pl", "live-log", "llog", "ll"],
+    "directory": "~/onemission.prod/public/content"
+  }, {
+    "name": "Live Debug Log",
+    "command": "tail -n 500 -f debug.log",
+    "aliases": ["prod-debug", "prod-dbg", "live-dbg", "pd", "ld"],
+    "directory": "~/onemission.prod/public/content"
+  }, {
+    "name": "Live Error Log",
+    "command": "tail -n 500 -f error",
+    "aliases": ["prod-error-log", "live-error-log", "live-error", "prod-error", "pe", "le"],
+    "directory": "/var/www/vhosts/onemission.fund/log"
+  }, {
+    "name": "Nginx Error Log",
+    "command": "sudo tail -n 500 -f error.log error.log.1",
+    "aliases": ["nginx-error-log", "nginx-error"],
+    "directory": "/var/log/nginx"
+  }],
+  "_toAdd": [
+    "wordpress database exploration",
+    "wordpress database import/export"
+  ],
+  "tmuxCommands": []
+}

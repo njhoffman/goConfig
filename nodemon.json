@@ -1,0 +1,20 @@
+{
+  "verbose" : true,
+  "ignore" : [
+    ".git",
+    "node_modules/**/node_modules",
+    "src"
+  ],
+  "execMap" : {
+    "js": "node --inspect=0.0.0.0:9210"
+  },
+  "watch" : [
+    "./*.js",
+    "bin/**/*.js",
+    "lib/**/*.js",
+    "config/**/*.js"
+  ],
+  "env" : {
+    "NODE_ENV" : "development"
+  }
+}
