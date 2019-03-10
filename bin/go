@@ -1,0 +1,96 @@
+#!/bin/zsh
+
+go_config="/home/$USER/bin/go_config"
+
+# load resource file with go definitions
+[ -s "/home/$USER/.gorc" ] && \. "/home/$USER/.gorc"
+
+function color {
+  echo "\e[38;5;${1}m"
+}
+# \033[38;5;206;48;5;57m
+clr_red='\033[0;31m' #G-Or-Bl-Prp-Cy-LG-DG-LR-LG-Y-LB-LP-LC-W
+clr_green='\033[38;5;72m'
+clr_purple='\033[0;35m'
+clr_cyan='\033[0;36m'
+clr_bold='\033[1;37m'
+nc='\033[0m'
+
+function usage_go_dir {
+cat << EOF
+  Usage: go [DIR_KEY]
+    DIR_KEY refers to a defined global array \$_GO_DIR
+
+  Available directory keywords:
+EOF
+  $go_config list directories
+  echo "\n"
+}
+
+function usage_go_run {
+cat << EOF
+
+  Usage: go run [RUN_KEY]
+    or:  go r [RUN_KEY]
+    RUN_KEY refers to a defined global array \$_GO_RUN
+
+  Available run keywords:
+EOF
+  $go_config list runCommands
+  echo "\n"
+}
+# ● \u25cf ▪ \u 25aa ► \u25ba
+# ╿ ╼ ╾ ╺ ○
+# ♦
+dir_pfx="$(color 67)╰─>$(color 67)>$(color 67)>"
+dir_prompt="$dir_pfx $(color 59)(cd) $(color 110)"
+run_prompt="$dir_pfx $(color 196)(run) $(color 59)=>$(color 166)"
+#
+
+function go_dir {
+  if [ ${_GO_DIR[$1]+abc} ]; then
+    echo "$dir_prompt ${_GO_DIR[$1]} $nc\n"
+    cd "${_GO_DIR[$1]}"
+  else
+    echo "\n$(color 130)Directory keyword $(color 124)'$1'$(color 130) does not exist $nc\n"
+    usage_go_dir
+    return 1
+  fi
+}
+
+function go_run {
+  if [ ${_GO_RUN[$1]+abc} ]; then
+    echo "$run_prompt ${_GO_RUN[$1]} $nc\n"
+    # [ ${_GO_DIR[$1]+abc} ] && cd "${_GO_DIR[$1]}"
+    eval "${_GO_RUN[$1]}"
+  else
+    echo "$clr_red Run keyword '$1' does not exist $nc"
+    usage_go_run
+    return 1
+  fi
+}
+
+function go_vim {
+  if [ ${_GO_DIR[$1]+abc} ]; then
+    vim=$VIM_BIN && [[ -z $VIM_BIN ]] && vim="/usr/local/bin/vim"
+    echo "$dir_prompt $(color 27)VIM: $(color 110)${_GO_DIR[$1]} $nc\n"
+    [ ${_GO_DIR[$1]+abc} ] && cd "${_GO_DIR[$1]}"
+    echo "\n$clr_purple -- Loading VIM for $1 (vim binary location $vim)"
+    "$vim"
+  fi
+}
+
+
+if [[ $# -gt 0 ]]; then
+  # TODO: tmux
+  if [[ $1 == "v" || $1 == "vim" ]]; then
+    go_vim $2
+  elif [[ $1 == "r" || $1 == "run" ]]; then
+    go_run $2
+  else
+    go_dir $1
+  fi
+else
+  usage_go_dir
+  usage_go_run
+fi
