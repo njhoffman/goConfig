@@ -1,0 +1,54 @@
+{
+  "directories": {
+    "$HOME/resources":                                  ["resources", "rsc", "dbg"],
+    "$HOME/resources/dotfiles":                         ["dotfiles"],
+    "$HOME/.config/":                                   ["config", "cfg"],
+    "$HOME/projects":                                   ["projects", "prj"],
+    "$HOME/sambatv":                                    ["sambatv", "stv"],
+    "$HOME/sambatv/competitive-insights-server":        ["competitive-insights-server", "ci-server", "cis"],
+    "$HOME/projects/better-musician":                   ["better-musician", "bm"],
+    "$HOME/projects/better-musician-api":               ["better-musician-api", "bm-api", "bma"],
+    "$HOME/projects/debugger-256":                      ["debugger-256", "debugger256", "dbg"],
+    "$HOME/projects/templates":                         ["templates", "tpl"]
+  },
+  "runCommands": [{
+    "name": "CI Server: dev",
+    "command": "npm run dev | debugger256",
+    "aliases": ["better-musician-api", "bm-api"],
+    "directory": "$HOME/sambatv/competitive-insights-server"
+  }, {
+    "name": "CI Server: lint watch all",
+    "command": "npm run lint:watch:all",
+    "aliases": ["ci-server-lint-watch", "ci-server-lint", "cis-lint", "cisl"],
+    "directory": "$HOME/sambatv/competitive-insights-server"
+  }, {
+    "name": "CI Server: test watch",
+    "command": "npm run test:watch",
+    "aliases": ["ci-server-test-watch", "ci-server-test", "cis-test", "cist"],
+    "directory": "$HOME/sambatv/competitive-insights-server"
+  }, {
+
+    "name": "BetterMusician: dev",
+    "command": "npm run dev | debugger256",
+    "aliases": ["better-musician", "bm"],
+    "directory": "$HOME/projects/better-musician"
+  }, {
+    "name": "BetterMusician: lint watch",
+    "command": "npm run lint:watch:all",
+    "aliases": ["better-musician-lint", "bm-lint", "bm-l"],
+    "directory": "$HOME/projects/better-musician"
+  }, {
+
+    "name": "BetterMusician API: dev",
+    "command": "npm run dev | debugger256",
+    "aliases": ["better-musician-api", "bm-api"],
+    "directory": "$HOME/projects/better-musician-api"
+  }, {
+    "name": "BetterMusician API: lint watch",
+    "command": "npm run lint:watch:all",
+    "aliases": ["better-musician-api-lint", "bm-api-lint", "bma-l"],
+    "directory": "$HOME/projects/better-musician-api"
+  }],
+
+  "tmuxCommands": []
+}
