@@ -6,6 +6,7 @@
   "scripts": {
     "build": "./node_modules/.bin/pkg -t node10-linux index.js -o ./bin/goConfig",
     "lint": "./node_modules/.bin/esw . --color",
+    "init:deimos": "node index.js init deimos",
     "init:orpheus": "node index.js init orpheus",
     "init:onemission": "node index.js init onemission",
     "test": "echo \"Error: no test specified\" && exit 1"
