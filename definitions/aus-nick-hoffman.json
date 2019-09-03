@@ -37,6 +37,11 @@
       "ci-client",
       "cic"
     ],
+    "$HOME/sambatv/provisioning_pe/terraform/apps": [
+      "provisioning-apps",
+      "prov-apps",
+      "pa"
+    ],
     "$HOME/projects/better-musician": ["better-musician", "bm"],
     "$HOME/projects/better-musician-api": [
       "better-musician-api",
