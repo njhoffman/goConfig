@@ -39,7 +39,6 @@
     {
       "name": "Musicman Client Dev",
       "command": "npm run dev ",
-      "_command": "npm run dev | debugger256",
       "aliases": ["musicman", "mm"],
       "directory": "/home/$USER/projects/musicman/client"
     },
@@ -76,7 +75,6 @@
     {
       "name": "BetterMusician Dev",
       "command": "npm run dev ",
-      "_command": "npm run dev | debugger256",
       "aliases": ["better-musician", "bm"],
       "directory": "/home/$USER/projects/better-musician"
     },
@@ -95,7 +93,6 @@
     {
       "name": "BetterMusician API Dev",
       "command": "npm run dev ",
-      "_command": "npm run dev | debugger256",
       "aliases": ["better-musician-api", "bm-api"],
       "directory": "/home/$USER/projects/better-musician-api"
     },
