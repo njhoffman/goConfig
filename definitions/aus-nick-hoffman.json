@@ -2,22 +2,10 @@
   "directories": {
     "$HOME/resources": ["resources", "rsc", "dbg"],
     "$HOME/resources/config/dotfiles": ["dotfiles"],
-    "$HOME/resources/config/dotfiles/.config": [
-      "resources-config",
-      "rsc-config",
-      "rsc-cfg"
-    ],
+    "$HOME/resources/config/dotfiles/.config": ["resources-config", "rsc-config", "rsc-cfg"],
     "$HOME/resources/config/dotfiles/.shell": ["resources-shell", "rsc-shell"],
-    "$HOME/resources/notes/commands": [
-      "resources-commands",
-      "commands",
-      "cmds"
-    ],
-    "$HOME/resources/notes/languages": [
-      "resources-languages",
-      "languages",
-      "lang"
-    ],
+    "$HOME/resources/notes/commands": ["resources-commands", "commands", "cmds"],
+    "$HOME/resources/notes/languages": ["resources-languages", "languages", "lang"],
     "$HOME/.config/i3": ["i3"],
     "$HOME/.config/polybar": ["polybar"],
     "$HOME/.config/tmux": ["tmux"],
@@ -27,27 +15,11 @@
     "$HOME/.shell/": ["shell"],
     "$HOME/projects": ["projects", "prj"],
     "$HOME/sambatv": ["sambatv", "stv"],
-    "$HOME/sambatv/competitive-insights-server": [
-      "competitive-insights-server",
-      "ci-server",
-      "cis"
-    ],
-    "$HOME/sambatv/competitive-insights-client": [
-      "competitive-insights-client",
-      "ci-client",
-      "cic"
-    ],
-    "$HOME/sambatv/provisioning_pe/terraform/apps": [
-      "provisioning-apps",
-      "prov-apps",
-      "pa"
-    ],
+    "$HOME/sambatv/competitive-insights-server": ["competitive-insights-server", "ci-server", "cis"],
+    "$HOME/sambatv/competitive-insights-client": ["competitive-insights-client", "ci-client", "cic"],
+    "$HOME/sambatv/provisioning_pe/terraform/apps": ["provisioning-apps", "prov-apps", "pa"],
     "$HOME/projects/better-musician": ["better-musician", "bm"],
-    "$HOME/projects/better-musician-api": [
-      "better-musician-api",
-      "bm-api",
-      "bma"
-    ],
+    "$HOME/projects/better-musician-api": ["better-musician-api", "bm-api", "bma"],
     "$HOME/projects/debugger-256": ["debugger-256", "debugger256", "dbg"],
     "$HOME/projects/templates": ["templates", "tpl"]
   },
