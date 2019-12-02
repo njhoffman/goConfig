@@ -11,7 +11,6 @@
     "$HOME/.config/tmux": ["tmux"],
     "$HOME/.config/vim": ["vim"],
     "$HOME/.config/": ["config", "cfg"],
-    "/var/log": ["log"],
     "$HOME/.shell/": ["shell"],
     "/home/$USER/projects": ["projects", "prj"],
     "/home/$USER/projects/musicman": ["musicman", "mm"],
@@ -20,7 +19,8 @@
     "/home/$USER/projects/musicman/client": ["musicman-client", "mmclient"],
     "/home/$USER/projects/better-musician": ["better-musician", "bm"],
     "/home/$USER/projects/better-musician-api": ["better-musician-api", "bm-api", "bma"],
-    "/home/$USER/projects/debugger-256": ["debugger-256", "debugger256", "dbg"]
+    "/home/$USER/projects/debugger-256": ["debugger-256", "debugger256", "dbg"],
+    "/var/log": ["log"]
   },
 
   "runCommands": [
