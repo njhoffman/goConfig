@@ -20,6 +20,7 @@
     "/home/$USER/projects/better-musician": ["better-musician", "bm"],
     "/home/$USER/projects/better-musician-api": ["better-musician-api", "bm-api", "bma"],
     "/home/$USER/projects/debugger-256": ["debugger-256", "debugger256", "dbg"],
+    "/home/$USER/projects/api-scheduler": ["scheduler", "spadash", "sd"],
     "/var/log": ["log"]
   },
 
@@ -59,6 +60,18 @@
       "command": "npm run lint:watch:all",
       "aliases": ["musicman-cli-lint", "mmc-lint", "mmc-l"],
       "directory": "/home/$USER/projects/musicman/cli"
+    },
+    {
+      "name": "Spadash Scheduler Dev ",
+      "command": "npm run dev ",
+      "aliases": ["scheduler", "spadash", "sd"],
+      "directory": "/home/$USER/projects/api-scheduler"
+    },
+    {
+      "name": "Spadash Scheduler Lint",
+      "command": "npm run lint:watch:all",
+      "aliases": ["scheduler-lint", "spadash-lint", "sd-l", "sdl"],
+      "directory": "/home/$USER/projects/api-scheduler"
     },
     {
       "name": "BetterMusician Client Dev",
