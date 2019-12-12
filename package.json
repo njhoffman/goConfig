@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/pkg -t node10-linux index.js -o ./bin/goto",
+    "build": "./node_modules/.bin/pkg -t node10-linux index.js -o ./bin/goto-config",
     "lint": "./node_modules/.bin/esw index.js lib --color",
     "lint:fix": "npm run lint -- --fix",
     "init:deimos": "node index.js init deimos",
