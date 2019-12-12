@@ -6,21 +6,25 @@
     "$HOME/resources/config/dotfiles/.shell": ["resources-shell", "rsc-shell"],
     "$HOME/resources/notes/commands": ["resources-commands", "commands", "cmds"],
     "$HOME/resources/notes/languages": ["resources-languages", "languages", "lang"],
+    "$HOME/bin": ["bin"],
     "$HOME/.config/i3": ["i3"],
     "$HOME/.config/polybar": ["polybar"],
     "$HOME/.config/tmux": ["tmux"],
     "$HOME/.config/vim": ["vim"],
     "$HOME/.config/": ["config", "cfg"],
     "$HOME/.shell/": ["shell"],
-    "/home/$USER/projects": ["projects", "prj"],
-    "/home/$USER/projects/musicman": ["musicman", "mm"],
-    "/home/$USER/projects/musicman/server": ["musicman-server", "mm-server", "mms"],
-    "/home/$USER/projects/musicman/cli": ["musicman-cli", "mmcli"],
-    "/home/$USER/projects/musicman/client": ["musicman-client", "mmclient"],
-    "/home/$USER/projects/better-musician": ["better-musician", "bm"],
-    "/home/$USER/projects/better-musician-api": ["better-musician-api", "bm-api", "bma"],
-    "/home/$USER/projects/debugger-256": ["debugger-256", "debugger256", "dbg"],
-    "/home/$USER/projects/api-scheduler": ["scheduler", "spadash", "sd"],
+    "$HOME/forks": ["forks", "frk"],
+    "$HOME/projects": ["projects", "prj"],
+    "$HOME/projects/musicman": ["musicman", "mm"],
+    "$HOME/projects/musicman/server": ["musicman-server", "mm-server", "mms"],
+    "$HOME/projects/musicman/cli": ["musicman-cli", "mmcli"],
+    "$HOME/projects/musicman/client": ["musicman-client", "mmclient"],
+    "$HOME/projects/better-musician": ["better-musician", "bm"],
+    "$HOME/projects/better-musician/client": ["better-musician-client", "bmc"],
+    "$HOME/projects/better-musician/server": ["better-musician-server", "bm-server", "bms"],
+    "$HOME/projects/debugger-256": ["debugger-256", "debugger256", "dbg"],
+    "$HOME/projects/prettyjson-256": ["prettyjson-256", "prettyjson256", "pjson"],
+    "$HOME/projects/api-scheduler": ["scheduler", "spadash", "sd"],
     "/var/log": ["log"]
   },
 
@@ -29,73 +33,73 @@
       "name": "Musicman Client Dev",
       "command": "npm run dev ",
       "aliases": ["musicman", "mm"],
-      "directory": "/home/$USER/projects/musicman/client"
+      "directory": "$HOME/projects/musicman/client"
     },
     {
       "name": "Musicman Client Lint",
       "command": "npm run lint:watch:all",
       "aliases": ["musicman-lint", "mm-lint", "mm-l"],
-      "directory": "/home/$USER/projects/musicman/client"
+      "directory": "$HOME/projects/musicman/client"
     },
     {
       "name": "Musicman API Dev ",
       "command": "npm run dev ",
       "aliases": ["musicman-api", "mma"],
-      "directory": "/home/$USER/projects/musicman/server"
+      "directory": "$HOME/projects/musicman/server"
     },
     {
       "name": "Musicman API Lint",
       "command": "npm run lint:watch:all",
       "aliases": ["musicman-api-lint", "mma-lint", "mma-l"],
-      "directory": "/home/$USER/projects/musicman/server"
+      "directory": "$HOME/projects/musicman/server"
     },
     {
       "name": "Musicman CLI Dev ",
       "command": "npm run dev ",
       "aliases": ["musicman-cli", "mmc"],
-      "directory": "/home/$USER/projects/musicman/cli"
+      "directory": "$HOME/projects/musicman/cli"
     },
     {
       "name": "Musicman CLI Lint",
       "command": "npm run lint:watch:all",
       "aliases": ["musicman-cli-lint", "mmc-lint", "mmc-l"],
-      "directory": "/home/$USER/projects/musicman/cli"
+      "directory": "$HOME/projects/musicman/cli"
     },
     {
       "name": "Spadash Scheduler Dev ",
       "command": "npm run dev ",
       "aliases": ["scheduler", "spadash", "sd"],
-      "directory": "/home/$USER/projects/api-scheduler"
+      "directory": "$HOME/projects/api-scheduler"
     },
     {
       "name": "Spadash Scheduler Lint",
       "command": "npm run lint:watch:all",
       "aliases": ["scheduler-lint", "spadash-lint", "sd-l", "sdl"],
-      "directory": "/home/$USER/projects/api-scheduler"
+      "directory": "$HOME/projects/api-scheduler"
     },
     {
       "name": "BetterMusician Client Dev",
       "command": "npm run dev ",
-      "aliases": ["better-musician", "bm"],
-      "directory": "/home/$USER/projects/better-musician"
+      "aliases": ["better-musician-client", "bmc"],
+      "directory": "$HOME/projects/better-musician/client"
     },
     {
       "name": "BetterMusician Client Lint",
       "command": "npm run lint:watch:all",
-      "aliases": ["better-musician-lint", "bm-lint", "bm-l"],
-      "directory": "/home/$USER/projects/better-musician"
+      "aliases": ["better-musician-lint", "bmc-lint", "bmc-l", "bmcl"],
+      "directory": "$HOME/projects/better-musician/client"
     },
     {
       "name": "BetterMusician API Dev",
       "command": "npm run dev ",
-      "aliases": ["better-musician-api", "bm-api"],
-      "directory": "/home/$USER/projects/better-musician-api"
+      "aliases": ["better-musician-server", "bm-server", "bms"],
+      "directory": "$HOME/projects/better-musician/server"
     },
     {
       "name": "BetterMusician API Lint",
       "command": "npm run lint:watch:all",
-      "aliases": ["better-musician-api-lint", "bm-api-lint", "bma-l"],
-      "directory": "/home/$USER/projects/better-musician-api"
+      "aliases": ["better-musician-lint", "bm-server-lint", "bms-l", "bmsl"],
+      "directory": "$HOME/projects/better-musician/server"
     }
   ],
 

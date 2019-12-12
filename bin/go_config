@@ -1,3 +1,0 @@
-#!/bin/bash
-
-node /home/$USER/bin/goConfig/index.js "$@"
