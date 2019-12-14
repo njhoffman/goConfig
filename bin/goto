@@ -39,12 +39,27 @@ EOF
   $goto_config list runCommands
   echo "\n"
 }
+
+function usage_goto_tmux {
+cat << EOF
+
+  Usage: goto tmux [TMUX_KEY]
+    or:  goto t [TMUX_KEY]
+    TMUX_KEY refers to a defined global array \$_TMUX_RUN
+
+  Available tmuxkeywords:
+EOF
+  $goto_config list tmuxCommands
+  echo "\n"
+}
+#
 # ● \u25cf ▪ \u 25aa ► \u25ba
 # ╿ ╼ ╾ ╺ ○
 # ♦
 dir_pfx="$(color 67)╰─>$(color 67)>$(color 67)>"
 dir_prompt="$dir_pfx $(color 59)(cd) $(color 110)"
 run_prompt="$dir_pfx $(color 196)(run) $(color 59)=>$(color 166)"
+tmux_prompt="$dir_pfx $(color 84)(tmux) $(color 59)=>$(color 166)"
 #
 
 function goto_dir {
@@ -64,8 +79,20 @@ function goto_run {
     # [ ${_GOTO_DIR[$1]+abc} ] && cd "${_GOTO_DIR[$1]}"
     eval "${_GOTO_RUN[$1]}"
   else
-    echo "$clr_red Run keyword '$1' does not exist $nc"
+    [[ "$1" != "" ]] && echo "$clr_red Run keyword '$1' does not exist $nc"
     usage_goto_run
+    return 1
+  fi
+}
+
+
+function goto_tmux {
+  if [ ${_GOTO_TMUX[$1]+abc} ]; then
+    echo "$tmux_prompt ${_GOTO_TMUX[$1]} $nc\n"
+    eval "${_GOTO_TMUX[$1]}"
+  else
+    [[ "$1" != "" ]] && echo "$clr_red TMUX keyword '$1' does not exist $nc"
+    usage_goto_tmux
     return 1
   fi
 }
@@ -82,15 +109,15 @@ function goto_vim {
 
 
 if [[ $# -gt 0 ]]; then
-  # TODO: tmux
   if [[ $1 == "v" || $1 == "vim" ]]; then
     goto_vim $2
   elif [[ $1 == "r" || $1 == "run" ]]; then
     goto_run $2
+  elif [[ $1 == "t" || $1 == "tmux" ]]; then
+    goto_tmux $2
   else
     goto_dir $1
   fi
 else
   usage_goto_dir
-  usage_goto_run
 fi

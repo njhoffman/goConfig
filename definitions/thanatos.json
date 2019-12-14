@@ -103,5 +103,11 @@
     }
   ],
 
-  "tmuxCommands": []
+  "tmuxCommands": [
+    {
+      "name": "Docker Containers & Images",
+      "command": "tmux new-window -n docker && tmux split-window -v -p 60 && tmux split-window -v -p 50 -t 0 && tmux send-keys -t 0 'loop \\\"docker images | xcols docker_images\\\"' C-M && tmux send-keys -t 1 'loop \\\"docker ps -a | xcols docker_containers\\\"' C-M && tmux select-pane -t 2",
+      "aliases": ["docker", "d"]
+    }
+  ]
 }
