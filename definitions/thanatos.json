@@ -3,7 +3,6 @@
     "$HOME/resources": ["resources", "rsc", "dbg"],
     "$HOME/resources/config/dotfiles": ["dotfiles"],
     "$HOME/resources/config/dotfiles/.config": ["resources-config", "rsc-config", "rsc-cfg"],
-    "$HOME/resources/config/dotfiles/.shell": ["resources-shell", "rsc-shell"],
     "$HOME/resources/notes/commands": ["resources-commands", "commands", "cmds"],
     "$HOME/resources/notes/languages": ["resources-languages", "languages", "lang"],
     "$HOME/bin": ["bin"],
@@ -29,6 +28,13 @@
     "$HOME/projects/musicman/server": ["musicman-server", "mm-server", "mms"],
     "$HOME/projects/musicman/cli": ["musicman-cli", "mmcli"],
     "$HOME/projects/musicman/client": ["musicman-client", "mmclient"],
+    "$HOME/projects/onemission-deploy": ["onemission-deploy", "omd"],
+    "$HOME/projects/onemission-deploy/onemission": ["onemission", "om"],
+    "$HOME/projects/onemission-deploy/onemission/public/content/themes/fh_boilerplate-child": [
+      "onemission-theme",
+      "omt"
+    ],
+    "$HOME/projects/onemission-deploy/onemission/public/content/plugins": ["onemission-plugins", "omp"],
     "$HOME/projects/better-musician": ["better-musician", "bm"],
     "$HOME/projects/better-musician/client": ["better-musician-client", "bmc"],
     "$HOME/projects/better-musician/server": ["better-musician-server", "bm-server", "bms"],
@@ -39,6 +45,12 @@
   },
 
   "runCommands": [
+    {
+      "name": "OneMission View Logs",
+      "command": "tail -n 300 -f",
+      "aliases": ["onemission-logs", "om-logs", "omlogs"],
+      "directory": "$HOME/projects/onemission-deploy/onemission/public/logs"
+    },
     {
       "name": "Musicman Client Dev",
       "command": "npm run dev ",
