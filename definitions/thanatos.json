@@ -47,7 +47,7 @@
   "runCommands": [
     {
       "name": "OneMission View Logs",
-      "command": "tail -n 300 -f",
+      "command": "tail -n 300 -f out.log",
       "aliases": ["onemission-logs", "om-logs", "omlogs"],
       "directory": "$HOME/projects/onemission-deploy/onemission/public/logs"
     },
