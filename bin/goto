@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-goto_config="/home/$USER/bin/goto-config"
+goto_config="$HOME/bin/goto-config/index.js"
 
 # load resource file with goto definitions
 [ -s "/home/$USER/.gotorc" ] && \. "/home/$USER/.gotorc"
