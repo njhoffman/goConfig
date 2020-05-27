@@ -35,6 +35,9 @@
       "omt"
     ],
     "$HOME/projects/onemission-deploy/onemission/public/content/plugins": ["onemission-plugins", "omp"],
+    "$HOME/projects/spadash-admin": ["spadash-admin", "sda", "sd"],
+    "$HOME/projects/spadash-admin/client": ["spadash-admin-client", "sd-client", "sdc"],
+    "$HOME/projects/spadash-admin/server": ["spadash-admin-server", "sd-server", "sds"],
     "$HOME/projects/better-musician": ["better-musician", "bm"],
     "$HOME/projects/better-musician/client": ["better-musician-client", "bmc"],
     "$HOME/projects/better-musician/server": ["better-musician-server", "bm-server", "bms"],
@@ -122,6 +125,24 @@
       "command": "npm run lint:watch:all",
       "aliases": ["better-musician-lint", "bm-server-lint", "bms-l", "bmsl"],
       "directory": "$HOME/projects/better-musician/server"
+    },
+    {
+      "name": "Spadash Admin Client",
+      "command": "npm run dev ",
+      "aliases": ["sd-client", "sdc"],
+      "directory": "$HOME/projects/spadash-admin/client"
+    },
+    {
+      "name": "Spadash Admin Server",
+      "command": "npm run dev | ccze -A",
+      "aliases": ["sd-server", "sds"],
+      "directory": "$HOME/projects/spadash-admin/server"
+    },
+    {
+      "name": "Spadash Admin Lint",
+      "command": "npm run lint:watch:all",
+      "aliases": ["sd-int", "sdl"],
+      "directory": "$HOME/projects/spadash-admin/server"
     }
   ],
 

@@ -16,6 +16,9 @@
     "$HOME/infrastructure/docker": ["infra-docker", "infrad", "id"],
     "$HOME/infrastructure/terraform": ["infra-terraform", "infrat", "it"],
     "$HOME/infrastructure/ansible": ["infra-terraform", "infraa", "ia"],
+    "$HOME/projects/spadash-admin": ["spadash-admin", "sda", "sd"],
+    "$HOME/projects/spadash-admin/client": ["spadash-admin-client", "sd-client", "sdc"],
+    "$HOME/projects/spadash-admin/server": ["spadash-admin-server", "sd-server", "sds"],
     "$HOME/projects/modteets": ["modteets", "m"],
     "$HOME/projects/modteets/server": ["m-server", "mserver", "ms"],
     "$HOME/projects/modteets/client": ["m-client", "mclient", "mc"],
@@ -29,9 +32,6 @@
       "onemission-theme",
       "omt"
     ],
-    "$HOME/projects/better-musician": ["better-musician", "bm"],
-    "$HOME/projects/better-musician/client": ["better-musician-client", "bmc"],
-    "$HOME/projects/better-musician/server": ["better-musician-server", "bm-server", "bms"],
     "/var/log": ["log"]
   },
 
@@ -101,6 +101,24 @@
       "command": "npm run lint:watch:all",
       "aliases": ["modteets-server-lint", "msl"],
       "directory": "$HOME/projects/modteets/server"
+    },
+    {
+      "name": "Spadash Admin Client",
+      "command": "npm run dev ",
+      "aliases": ["sd-client", "sdc"],
+      "directory": "$HOME/projects/spadash-admin/client"
+    },
+    {
+      "name": "Spadash Admin Server",
+      "command": "npm run dev | ccze -A ",
+      "aliases": ["sd-server", "sds"],
+      "directory": "$HOME/projects/spadash-admin/server"
+    },
+    {
+      "name": "Spadash Admin Lint",
+      "command": "npm run lint:watch:all",
+      "aliases": ["sd-int", "sdl"],
+      "directory": "$HOME/projects/spadash-admin/server"
     }
   ],
 

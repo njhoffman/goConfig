@@ -10,6 +10,7 @@
     "init:deimos": "node index.js init deimos",
     "init:orpheus": "node index.js init orpheus",
     "init:onemission": "node index.js init onemission",
+    "init:thanatos": "node index.js init thanatos",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
