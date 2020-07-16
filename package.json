@@ -18,7 +18,7 @@
   "dependencies": {
     "chalk": "^4.0.0",
     "columnify": "1.5.4",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "pkg": "^4.4.7",
     "prompt": "1.0.0",
     "term-size": "^2.2.0",
