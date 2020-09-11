@@ -1,7 +1,8 @@
 {
   "directories": {
-    "$HOME/resources": ["resources", "rsc", "dbg"],
-    "$HOME/resources/notes/commands": ["resources-commands", "commands", "cmds"],
+    "$HOME/resources": ["resources", "rsc"],
+    "$HOME/resources/notes/commands": ["commands", "cmds", "cmd"],
+    "$HOME/resources/provision": ["provision", "prv"],
     "$HOME/bin": ["bin"],
     "$HOME/Music/Sorted": ["music-sorted", "sorted", "Sorted"],
     "$HOME/Music/Unsorted": ["music-unsorted", "unsorted", "Unsorted"],
@@ -12,60 +13,23 @@
     "$HOME/forks": ["forks", "frk"],
     "$HOME/projects": ["projects", "prj"],
     "$HOME/projects/algorithmia": ["algorithmia", "alg"],
+    "$HOME/projects/musicman/cli": ["musicman", "mmcli", "mm"],
+    "$HOME/projects/movieman": ["movieman"],
     "$HOME/infrastructure": ["infra", "i"],
     "$HOME/infrastructure/docker": ["infra-docker", "infrad", "id"],
     "$HOME/infrastructure/terraform": ["infra-terraform", "infrat", "it"],
     "$HOME/infrastructure/ansible": ["infra-terraform", "infraa", "ia"],
-    "$HOME/projects/spadash-admin": ["spadash-admin", "sda", "sd"],
-    "$HOME/projects/spadash-admin/client": ["spadash-admin-client", "sd-client", "sdc"],
-    "$HOME/projects/spadash-admin/server": ["spadash-admin-server", "sd-server", "sds"],
-    "$HOME/projects/modteets": ["modteets", "m"],
-    "$HOME/projects/modteets/server": ["m-server", "mserver", "ms"],
-    "$HOME/projects/modteets/client": ["m-client", "mclient", "mc"],
-    "$HOME/projects/musicman": ["musicman", "mm"],
-    "$HOME/projects/musicman/server": ["musicman-server", "mm-server", "mms"],
-    "$HOME/projects/musicman/cli": ["musicman-cli", "mmcli"],
-    "$HOME/projects/musicman/client": ["musicman-client", "mmclient"],
-    "$HOME/projects/onemission-deploy": ["onemission-deploy", "omd"],
-    "$HOME/projects/onemission-deploy/onemission": ["onemission", "om"],
-    "$HOME/projects/onemission-deploy/onemission/public/content/themes/fh_boilerplate-child": [
-      "onemission-theme",
-      "omt"
-    ],
+    "$HOME/projects/spadash/spadash-admin": ["spadash-admin", "sda"],
+    "$HOME/projects/spadash/spadash-admin/client": ["sd-client", "sdc"],
+    "$HOME/projects/spadash/spadash-admin/server": ["sd-server", "sds"],
+    "$HOME/projects/spadash/api-database": ["spadash-database", "sddb"],
+    "$HOME/projects/spadash/spadash-system": ["spadash-system", "sdsys"],
+    "$HOME/projects/spadash/env": ["spadash-env", "sdenv", "sde", "env"],
+    "$HOME/projects/spadash/api-scheduler": ["api-scheduler", "scheduler", "sds"],
     "/var/log": ["log"]
   },
 
   "runCommands": [
-    {
-      "name": "OneMission View Logs",
-      "command": "tail -n 300 -f out.log",
-      "aliases": ["onemission-logs", "om-logs", "omlogs"],
-      "directory": "$HOME/projects/onemission-deploy/onemission/public/logs"
-    },
-    {
-      "name": "Musicman Client Dev",
-      "command": "npm run dev ",
-      "aliases": ["musicman", "mm"],
-      "directory": "$HOME/projects/musicman/client"
-    },
-    {
-      "name": "Musicman Client Lint",
-      "command": "npm run lint:watch:all",
-      "aliases": ["musicman-lint", "mm-lint", "mm-l"],
-      "directory": "$HOME/projects/musicman/client"
-    },
-    {
-      "name": "Musicman API Dev ",
-      "command": "npm run dev ",
-      "aliases": ["musicman-api", "mma"],
-      "directory": "$HOME/projects/musicman/server"
-    },
-    {
-      "name": "Musicman API Lint",
-      "command": "npm run lint:watch:all",
-      "aliases": ["musicman-api-lint", "mma-lint", "mma-l"],
-      "directory": "$HOME/projects/musicman/server"
-    },
     {
       "name": "Musicman CLI Dev ",
       "command": "npm run dev ",
@@ -82,43 +46,25 @@
       "name": "Spadash Scheduler Dev ",
       "command": "npm run dev ",
       "aliases": ["scheduler", "spadash", "sd"],
-      "directory": "$HOME/projects/api-scheduler"
-    },
-    {
-      "name": "Modteets Client Dev",
-      "command": "npm run dev ",
-      "aliases": ["modteets-client", "mc"],
-      "directory": "$HOME/projects/modteets/client"
-    },
-    {
-      "name": "Modteets Server Dev",
-      "command": "npm run dev ",
-      "aliases": ["modteets-server", "ms"],
-      "directory": "$HOME/projects/modteets/server"
-    },
-    {
-      "name": "Modteets Server Lint",
-      "command": "npm run lint:watch:all",
-      "aliases": ["modteets-server-lint", "msl"],
-      "directory": "$HOME/projects/modteets/server"
+      "directory": "$HOME/projects/spadash/api-scheduler"
     },
     {
       "name": "Spadash Admin Client",
       "command": "npm run dev ",
       "aliases": ["sd-client", "sdc"],
-      "directory": "$HOME/projects/spadash-admin/client"
+      "directory": "$HOME/projects/spadash/spadash-admin/client"
     },
     {
       "name": "Spadash Admin Server",
       "command": "npm run dev | ccze -A ",
       "aliases": ["sd-server", "sds"],
-      "directory": "$HOME/projects/spadash-admin/server"
+      "directory": "$HOME/projects/spadash/spadash-admin/server"
     },
     {
       "name": "Spadash Admin Lint",
       "command": "npm run lint:watch:all",
       "aliases": ["sd-int", "sdl"],
-      "directory": "$HOME/projects/spadash-admin/server"
+      "directory": "$HOME/projects/spadash/spadash-admin/server"
     }
   ],
 
